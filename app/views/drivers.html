@@ -1,0 +1,35 @@
+<div class="row">
+  <h3 class="sub-header">Drivers Championship Standings</h3>
+</div>
+<div class="row">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th colspan="4">
+        <span class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control" type="text" ng-model="nameFilter" placeholder="Search...">
+        </span>
+        </th>
+      </tr>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="driver in driversList | filter: searchFilter">
+        <td>{{$index + 1}}</td>
+        <td>
+          <img ng-src="img/flags/{{driver.Driver.nationality}}.png" />
+          <a href="#/drivers/{{driver.Driver.driverId}}">
+            {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+          </a>
+        </td>
+        <td>{{driver.Constructors[0].name}}</td>
+        <td>{{driver.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
