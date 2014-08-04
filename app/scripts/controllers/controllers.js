@@ -8,24 +8,23 @@ angular.module('F1FeederApp.controllers', [])
       {
           Driver: {
               givenName: 'Sebastian',
-              nationality: "German",
+              nationality: 'German',
               familyName: 'Vettel'
           },
           points: 322,
           Constructors: [
-              {name: "Red Bull"}
+              {name: 'Red Bull'}
           ]
       },
       {
           Driver: {
             givenName: 'Fernando',
-            nationality: "Spanish",
+            nationality: 'Spanish',
             familyName: 'Alonso'
           },
           points: 207,
-          nationality: "Spanish",
           Constructors: [
-              {name: "Ferrari"}
+              {name: 'Ferrari'}
           ]
       }
     ];
